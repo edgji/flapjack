@@ -3,3 +3,4 @@
 coverage/
 demo/bundle.js
 dist/index.js
+storybook-static
