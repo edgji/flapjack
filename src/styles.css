@@ -1,0 +1,20 @@
+h1 {
+	text-align: left;
+	font-size:20px !important;
+	font-weight:500;
+}
+
+h1:nth-child(1){
+	margin-top:48px !important;
+	margin-bottom:24px !important;
+}
+
+pre{
+	font-size: 14px !important;
+  border-left: none !important;
+  overflow: hidden !important;
+}
+
+h2{
+	display:none;
+}
