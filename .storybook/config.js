@@ -6,8 +6,6 @@ import { setOptions } from '@storybook/addon-options';
 
 setOptions({
     name: 'flapjack',
-    goFullScreen: false,
-    showStoriesPanel: true,
     showAddonPanel: true,
     showSearchBox: false,
     addonPanelInRight: true,

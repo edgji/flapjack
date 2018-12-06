@@ -5,7 +5,18 @@ import '../styles.css';
 class Button extends React.Component {
 	constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      hover: false
+    };
+    this.hoverIn = this.hoverIn.bind(this);
+    this.hoverOut = this.hoverOut.bind(this);
+  }
+
+  hoverIn(){
+    this.setState({hover: true});
+  }
+  hoverOut(){
+    this.setState({hover: false});
   }
 
   render() {
@@ -22,13 +33,17 @@ class Button extends React.Component {
     if(this.props.level === 'secondary'){
       backgroundClass = ' white-background type_color-action border border-color-full'
     }
+    if(this.state.hover){
+      backgroundClass += ' half-opacity';
+    }
 
     var sizeClass = ' buttons__' + this.props.size;
 
     var className = 'mgl2 hover-pointer flex flex-center border-box' + sizeClass + backgroundClass;
 
     return (
-      <button onClick={this.props.onClick} className={className}>
+      <button onMouseLeave={this.hoverOut} onMouseEnter={this.hoverIn} 
+          onClick={this.props.onClick} className={className}>
         <div className={"label nowrap " + labelMargin}>{title}</div>
       </button>
     );

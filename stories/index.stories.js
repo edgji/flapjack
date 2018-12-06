@@ -22,3 +22,16 @@ storiesOf('Button', module)
   <Button size={select('Size',sizeOptions,defaultSize)} onClick={action('clicked')} title={text('Label', 'Label')}></Button>
   )
 )
+.add('sizes',() =>
+  <div className='flex'>
+    <Button size='small' onClick={action('clicked')} title='Small'></Button>
+    <Button size='medium' onClick={action('clicked')} title='Medium'></Button>  
+    <Button size='large' onClick={action('clicked')} title='Large'></Button>
+  </div>
+)
+.add('levels',() =>
+  <div className='flex'>
+    <Button level='primary' onClick={action('clicked')} title='Primary'></Button>
+    <Button level='secondary' onClick={action('clicked')} title='Secondary'></Button>
+  </div>
+)
